@@ -1,0 +1,17 @@
+:root{
+    --cor-primaria: #42C2FF;
+    --cor-secundaria: #317EE8;
+    --cor-terciaria: #31DEE8;
+    --cor-light: #F5F5F5;
+    --cor-dark: #19282F;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,*::before{
+    box-sizing: inherit;
+}
