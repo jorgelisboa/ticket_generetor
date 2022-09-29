@@ -1,47 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
-:root{
-    --cor-primaria: #42C2FF;
-    --cor-secundaria: #317EE8;
-    --cor-terciaria: #31DEE8;
-    --cor-light: #F5F5F5;
-    --cor-dark: #19282F;
+:root {
+  --cor-primaria: #42c2ff;
+  --cor-secundaria: #317ee8;
+  --cor-terciaria: #31dee8;
+  --cor-light: #f5f5f5;
+  --cor-dark: #19282f;
 }
 
-*{
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-*::after,*::before{
-    box-sizing: inherit;
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
-.bus-icon{
-    width: 33%;
+.bus-icon {
+  width: 33%;
 }
 
-.ticket-generation-form{
-    background-color: var(--cor-light);
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: 0 auto;
-    padding: 2%;
+.ticket-generation-form {
+  background-color: var(--cor-light);
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  padding: 2%;
 }
 
 .input-field {
-    border:none;
-    margin:32px 16px; /*vertical e horizontal */ 
-    font-size: 16px;
+  border: none;
+  margin: 32px 16px; /*vertical e horizontal */
+  font-size: 16px;
 }
 
-.generation-button{
-    padding: 16px;
-    width: 60%;
-    margin: 16px auto 0 auto;
-    border-radius: 10px;
-    cursor: pointer;
+.generation-button {
+  padding: 16px;
+  width: 60%;
+  margin: 16px auto 0 auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.generation-button:hover {
+  background-color: red;
+}
+
+nav {
+  background: red;
 }

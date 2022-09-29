@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Ticket Generator</title>
-</head>
-<body>
-    <figure>
-        <img src="./images/bus_ticket.png" alt="logo empresa" class="bus-icon">
-    </figure>
-    <span>Preencha os dados abaixo para a criação de seu bilhete</span>
 
-    <!-- formulario -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Ticket Generator</title>
+</head>
+
+<body>
+  <nav>
+    <a href="/" title="Logo Ticket Generator">
+      <picture>
+        <img src="./images/bus_ticket.png" alt="logo empresa" class="bus-icon">
+      </picture>
+    </a>
+    <ul>
+      <li>(00) 0000-0000</li>
+      <li>
+        <a class="tg-btn" href="/pages/about.html">Sobre</a>
+      </li>
+      <li>
+        <a class="tg-btn" href="/pages/login.html">Login</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="container">
+      <picture>
+        <img src="./images/bus_ticket.png" alt="logo empresa" class="bus-icon">
+      </picture>
+      <span>Preencha os dados abaixo para a criação de seu bilhete</span>
+    </div>
+
+    <!-- Formulario/ -->
     <form class="ticket-generation-form">
-        <input class="input-field" type="text" placeholder="Insira seu nome" name="" id="">
-        <input class="input-field" type="text" placeholder="Insira seu CPF">
-        <input class="input-field" type="email" placeholder="Insira seu email" name="" id="">
-        <div>
-            <input type="checkbox">
-            <span>
-                Estou de acordo com os <a href="">termos de uso e condições</a>
-            </span>
-        </div>
-        <button class="generation-button">
-            GERAR MEU BILHETE
-        </button>
+      <input class="input-field" type="text" placeholder="Insira seu nome" name="" id="">
+      <input class="input-field" type="text" placeholder="Insira seu CPF">
+      <input class="input-field" type="email" placeholder="Insira seu email" name="" id="">
+      <div>
+        <input type="checkbox">
+        <span>
+          Estou de acordo com os <a href="">termos de uso e condições</a>
+        </span>
+      </div>
+      <button class="generation-button">
+        GERAR MEU BILHETE
+      </button>
     </form>
-    <script src="./script.js"></script>
+  </main>
+  <script src="./script.js"></script>
 </body>
+
 </html>
