@@ -30,11 +30,27 @@ body{
 }
 
 .bus-icon {
-  width: 5%;
+  width: 11%;
+}
+
+.ticket-icon {
+  width: 200px;
+}
+
+picture{
+  display: block;
+}
+
+main .container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
 }
 
 .ticket-generation-form {
-  background-color: var(--cor-light);
+  backdrop-filter: brightness(97%);
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -60,18 +76,22 @@ body{
   background-color: var(--cor-secundaria);
 }
 
-nav {
+nav{
   background-color: var(--cor-primaria);
   height: 95px;
 }
 
-
-
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 /* RESPONSIVIDADE */
 @media screen and (min-width: 768px) {
-    .container {
-        width: 80%;
-        margin: 0 auto;
-    }
+  .container {
+      width: 80%;
+      margin: 0 auto;
+  }
 }
+
