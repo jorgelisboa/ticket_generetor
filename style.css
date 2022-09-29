@@ -5,6 +5,7 @@
   --cor-secundaria: #317ee8;
   --cor-terciaria: #31dee8;
   --cor-light: #f5f5f5;
+  --cor-yellow: #f7d91a
   --cor-dark: #19282f;
 }
 
@@ -20,8 +21,12 @@
   box-sizing: inherit;
 }
 
+body{
+  background-color: var(--cor-light);
+}
+
 .bus-icon {
-  width: 33%;
+  width: 5%;
 }
 
 .ticket-generation-form {
@@ -48,9 +53,10 @@
 }
 
 .generation-button:hover {
-  background-color: red;
+  background-color: var(--cor-secundaria);
 }
 
 nav {
-  background: red;
+  background-color: var(--cor-primaria);
+  height: 95px;
 }
