@@ -56,6 +56,10 @@ main .container {
   gap: 50px;
 }
 
+.form-instructions {
+  font-size: xx-large;
+  text-align: center;
+}
 .ticket-generation-form {
   backdrop-filter: brightness(97%);
   display: flex;
@@ -75,7 +79,7 @@ main .container {
 }
 
 .input-field::placeholder {
-  opacity: 0.4;
+  opacity: 0.9;
 }
 
 .input-field:focus-visible {
@@ -83,7 +87,8 @@ main .container {
 }
 
 .input-label {
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .generation-button {
@@ -92,10 +97,11 @@ main .container {
   margin: 16px auto 0 auto;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color color 0.3s ease-in-out;
 }
 
 .generation-button:hover {
+  color: var(--cor-light);
   background-color: var(--cor-secundaria);
 }
 

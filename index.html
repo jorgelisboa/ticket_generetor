@@ -17,7 +17,7 @@
           <img src="./images/logo-bus-puc.png" alt="logo empresa" class="logo">
         </picture>
       </a>
-      <ul class="flex-center">
+      <!-- <ul class="flex-center">
         <li>(00) 0000-0000</li>
         <li>
           <a class="tg-btn flex-center" href="/pages/about.html">Sobre</a>
@@ -25,7 +25,7 @@
         <li>
           <a class="tg-btn flex-center" href="/pages/login.html">Login</a>
         </li>
-      </ul>
+      </ul> Not for now, we'll use a responsive design in our next sprint-->
     </div>
   </nav>
 
@@ -34,28 +34,33 @@
       <picture class="flex-center">
         <img src="./images/ticket-icon.png" alt="icone de ticket" class="ticket-icon">
       </picture>
-      <span>Preencha os dados abaixo para a criação de seu bilhete</span>
+      <span class="form-instructions">
+        Preencha o formulário abaixo para a criação de seu bilhete único urbano
+      </span>
 
       <!-- Formulario/ -->
-      <form class="ticket-generation-form">
+      <form class="ticket-generation-form" enctype="multipart/form-data" method="post">
         <label class="input-label" for="nome">Nome</label>
         <input class="input-field" type="text" placeholder="Insira seu nome" name="" id="nome">
         <label class="input-label" for="cpf">CPF</label>
         <input class="input-field" type="text" placeholder="000.000.000-00" id="cpf">
         <label class="input-label" for="email">E-Mail</label>
         <input class="input-field" type="email" placeholder="exemplo@exemplo.com" name="" id="email">
+        <!-- Checkbox -->
         <div>
           <input type="checkbox">
           <span>
             Estou de acordo com os <a href="">termos de uso e condições</a>
           </span>
         </div>
+        <!-- Button -->
         <button class="generation-button">
           GERAR MEU BILHETE
         </button>
       </form>
     </div>
   </main>
+
   <script src="./script.js"></script>
 </body>
 
