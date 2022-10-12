@@ -82,7 +82,7 @@ main {
 }
 
 .input-field::placeholder {
-  opacity: 0.4;
+  opacity: 0.9;
 }
 
 .input-field:focus-visible {
@@ -121,10 +121,11 @@ main {
   margin: 8px auto;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color color 0.3s ease-in-out;
 }
 
 .generation-button:hover {
+  color: var(--cor-light);
   background-color: var(--cor-secundaria);
 }
 
