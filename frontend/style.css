@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+:root {
+  --cor-primaria: #42c2ff;
+  --cor-secundaria: #317ee8;
+  --cor-terciaria: #31dee8;
+  --cor-light: #f5f5f5;
+  --cor-yellow: #f7d91a;
+  --cor-dark: #19282f;
+}
+
+* {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a:visited {
+  color: var(--cor-primaria);
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+body {
+  background-color: var(--cor-light);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 80px;
+}
+
+.ticket-icon {
+  width: 200px;
+}
+
+main .container {
+  flex-direction: column;
+  gap: 50px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  align-items: center;
+  min-height: calc(100vh - 170px);
+}
+
+.ticket-generation-form {
+  backdrop-filter: brightness(97%);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.input-field {
+  border: none;
+  margin: 6px 0 12px; /*vertical e horizontal */
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.input-field::placeholder {
+  opacity: 0.9;
+}
+
+.input-field:focus-visible {
+  outline-color: var(--cor-secundaria);
+}
+
+.input-label {
+  font-size: 30px;
+  margin: 50px 20px 45px 350px;
+}
+
+.about-home {
+  margin: 32px 0;
+  padding: 32px;
+}
+
+.home-title {
+  font-size: 32px;
+  margin: 10px 40%;
+}
+
+.home-description {
+  font-size: 15px;
+}
+
+.buttons-home {
+  display: flex;
+  flex-direction: column;
+}
+
+.generation-button {
+  background-color: #e1e1e1;
+  color: var(--cor-dark);
+  text-decoration: none;
+  padding: 18px;
+  width: 80%;
+  margin: 8px auto;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.generation-button:hover,
+.generation-button:visited:hover {
+  color: var(--cor-light);
+  background-color: var(--cor-secundaria);
+}
+
+.generation-button:visited {
+  color: inherit;
+}
+
+nav {
+  background-color: var(--cor-secundaria);
+  height: 95px;
+}
+
+nav .container {
+  justify-content: space-between;
+  gap: 16px;
+}
+
+nav ul {
+  justify-content: end !important;
+  gap: 12px;
+  width: 100%;
+}
+
+.tg-btn {
+  background-color: var(--cor-yellow);
+  width: 100px;
+  height: 30px;
+  color: var(--cor-dark);
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.tg-btn:hover {
+  background-color: var(--cor-dark);
+  color: var(--cor-light);
+}
+
+#generateForm {
+  box-shadow: 5px 5px 5px #19282f15;
+  width: 90%;
+  padding: 20px;
+  border-radius: 16px;
+  margin: 34px auto;
+  text-align: center;
+}
+
+#generateForm legend {
+  color: var(--cor-dark);
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+#generateForm p {
+  text-align: justify;
+  color: #19282f;
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+
+#generateForm .input-field {
+  text-align: left;
+  padding: 0;
+}
+
+#generateForm button {
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 300px;
+}
+
+footer {
+  padding: 16px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  text-align: center;
+}
+
+footer p {
+  color: var(--cor-dark);
+}
+
+/* RESPONSIVIDADE */
+@media screen and (min-width: 768px) {
+  #generateForm {
+    width: 600px;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .ticket-generation-form {
+    width: 70%;
+  }
+}

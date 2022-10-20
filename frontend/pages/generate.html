@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerar Bilhete Urbano</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <a href="/" title="Logo Ticket Generator">
+        <picture class="flex-center">
+          <img src="../images/logo-bus-puc.png" alt="logo empresa" class="logo">
+        </picture>
+      </a>
+    </div>
+  </nav>
+
+  <main class="generate">
+    <form id="generateForm">
+      <legend>Termos e Condições de Uso</legend>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit obcaecati sunt, facilis dolorem quo sequi voluptatibus assumenda inventore excepturi natus? Nihil expedita accusamus veritatis aut pariatur sapiente magnam nesciunt?</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore autem vel tenetur pariatur magni nisi. Est nulla vel ut harum tempore, consequuntur repellat illum accusantium, obcaecati facere vitae asperiores quas voluptatem dolore. Obcaecati quidem in error saepe nihil dolorum, laboriosam eaque odit natus vitae distinctio earum ipsum molestias voluptatum. Omnis ipsum minus laborum quidem, assumenda quis debitis! Aliquam recusandae sapiente voluptatum quaerat temporibus iure aliquid at. Officia provident nulla exercitationem quisquam voluptates neque esse tempora necessitatibus. Dolor voluptatum voluptas repellat qui vel perferendis ducimus reiciendis, eveniet aspernatur accusamus id tenetur libero voluptatem facilis error. Sapiente blanditiis corrupti quidem quos doloribus?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dolorum eius eligendi officiis illum dolorem sint at. Laborum dolore optio sint a eaque, velit suscipit tenetur nesciunt, beatae fugit similique ad? Quam, adipisci iste delectus illo, similique, saepe a expedita ducimus tempore recusandae perferendis vel harum nemo hic quidem maxime.</p>
+      <div class="input-field">
+        <input type="checkbox" name="temos_aceite" id="temos_aceite" required>
+        <label for="temos_aceite">Concordo com os Termos e Condições de Uso aqui descritos.</label>
+      </div>
+      <button type="submit" class="generation-button">gerar bilhete</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Ticket Generator - PUC Campinas - Projeto Integrador II</p>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    const generateForm = document.getElementById("generateForm");
+
+    const gerarBilheteUrbano = (e) => {
+      e.preventDefault();
+      alert(`Gerou Bilhete Urbano: XXXXXXXXX`);
+    };
+
+    generateForm.addEventListener("submit", gerarBilheteUrbano);
+  </script>
+</body>
+
+</html>
