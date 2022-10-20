@@ -1,8 +1,8 @@
-const getTickets = async () => {
+const recuperarTickets = async () => {
   const tickets = { msg: "Recuperar todos os tickets." };
   return tickets;
 };
 
 module.exports = {
-  getTickets,
+  recuperarTickets,
 };

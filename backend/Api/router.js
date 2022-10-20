@@ -3,6 +3,6 @@ const ticketController = require("./controllers/ticket.controller");
 
 const router = express.Router();
 
-router.get("/api/tickets", ticketController.getTickets);
+router.get("/api/tickets", ticketController.recuperarTickets);
 
 module.exports = router;
