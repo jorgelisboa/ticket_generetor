@@ -12,14 +12,16 @@ const recuperarBilhetes = async () => {
     connectString: process.env.DB_CONNECTIONSTRING || "CEATUDB02:1521/xe", 
   });
 
-  let randomCode = (Math.random().toString(36).slice(2)).toUpperCase();
+  let randomCode = new Date().getTime();
+  let result;
+
    try {
-    // connection = await oracledb.getConnection(dbConfig); TODO: Verificar funcionamendo com arquivo externo. 
+    //connection = await oracledb.getConnection(dbConfig); TODO: Verificar funcionamendo com arquivo externo.
     await connection.execute(`INSERT INTO bilhetes (codigo, numero) VALUES (seq_codigo_bilhetes.nextval, :bilhete)`, [randomCode]);
 
-    return {
-      codBilhete: randomCode
-    };
+    const bilhete = await connection.execute(`SELECT numero, data_geracao FROM bilhetes WHERE numero = :bilhete`, [randomCode]);
+
+    return bilhete.rows[0];
 
    } catch (err) {
      console.log(err);
