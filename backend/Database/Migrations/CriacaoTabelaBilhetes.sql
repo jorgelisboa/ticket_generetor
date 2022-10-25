@@ -10,7 +10,7 @@ CREATE SEQUENCE seq_codigo_bilhetes
     
 CREATE TABLE bilhetes (
     codigo INTEGER NOT NULL PRIMARY KEY, 
-    numero VARCHAR2(32) default SYS_GUID(),
+    numero VARCHAR2(32) DEFAULT SYS_GUID(),
     data_geracao DATE DEFAULT SYSDATE
 );
 
