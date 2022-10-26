@@ -1,7 +1,19 @@
 let bilhete;
+
+function gerarBilhete(event){
+    console.log("entrou na gerar bilhete");
+
+    //Criar cartão na API
+    getBilhete()
+    //Ir pra página do cartão gerado (levar valores do cartão)
+    console.log(bilhete);
+    window.open("http://localhost:5500/frontend/pages/created.html", "_self");
+
+}
+
 const baseUrl = "http://localhost:5000/api"
 
-async function gerarBilhete(){
+async function getBilhete(){
     console.log("gerando bilhete")
 
     //fazendo o get 
@@ -9,7 +21,7 @@ async function gerarBilhete(){
         method: 'GET',
         
     })
-    .then((response) =>response.json())
+    .then((response) => response.json())
     .then((json) =>{
         console.log(json)
         bilhete = json
@@ -18,5 +30,4 @@ async function gerarBilhete(){
 
 }
 
-gerarBilhete()
 console.log("aaaaa");
