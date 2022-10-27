@@ -110,6 +110,27 @@ main {
   margin: 10px 40%;
 }
 
+.created {
+  margin-left: 10px;
+  margin-top: 50px;
+  
+}
+
+.card {
+  margin-top: -300px;
+  margin-right: 150px;
+  
+}
+
+.card-title {
+  font-size: 32px;
+}
+
+.card-description {
+  font-size: 28px;
+  margin-top: 100px;
+}
+
 .home-description {
   font-size: 15px;
 }
