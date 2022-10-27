@@ -23,6 +23,7 @@ const recuperarBilhetes = async () => {
 
     return bilhete.rows[0];
 
+
    } catch (err) {
      console.log(err);
    } finally {
