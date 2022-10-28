@@ -13,7 +13,6 @@ const recuperarBilhetes = async () => {
   });
 
   let randomCode = new Date().getTime();
-  let result;
 
    try {
     //connection = await oracledb.getConnection(dbConfig); TODO: Verificar funcionamendo com arquivo externo.
@@ -22,7 +21,6 @@ const recuperarBilhetes = async () => {
     const bilhete = await connection.execute(`SELECT numero, data_geracao FROM bilhetes WHERE numero = :bilhete`, [randomCode]);
 
     return bilhete.rows[0];
-
 
    } catch (err) {
      console.log(err);
