@@ -23,26 +23,33 @@
 
 
 
-<main>
-    <title>Bilhete gerado</title>
-    <div class="created">
-        <h1 class="card-title">
-            Bilhete gerado com sucesso
-        </h1>
-        <h1 class="card-description">
-            Confira abaixo as informações do seu bilhete:<br><br>ID: XXXXXXXX<br>Data de geração: DD/MM/AAAAA
-        </h1>
-        <picture>
-            <img src="../images/urban card.png" alt="urban card" class="card" align="right">
-        </picture>
-    </div>       
-</main>
+    <main>
+        <div class="created">
+            <div class="card-text">
+                <h1 class="card-title">
+                    Bilhete gerado com sucesso!
+                </h1>
+                <div class="ticket-description">
+                    <h2>
+                        Confira abaixo as informações:
+                    </h2>
+                    <h3 id="ticketCodigo"></h3>
+                    <h3 id="ticketDate"></h3>
+                </div>
+            </div>
+
+            <picture>
+                <img src="../images/ticket.png" alt="urban card" class="card" align="right">
+            </picture>
+        </div>       
+    </main>
 
     <footer>
     <p>Ticket Generator - PUC Campinas - Projeto Integrador II</p>
     </footer>
+    <script src="../generatedTicket.js"></script>
 </body>
-  
+</html>  
 
 
 <!-- <body>

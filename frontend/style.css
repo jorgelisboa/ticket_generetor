@@ -111,28 +111,33 @@ main {
 }
 
 .created {
-  margin-left: 10px;
-  margin-top: 50px;
+  padding: 32px 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
   
 }
 
 .card {
-  margin-top: -300px;
-  margin-right: 150px;
-  
+  max-width: 512px;
+  width: 100%;
 }
 
 .card-title {
-  font-size: 32px;
+  margin-bottom: 32px;
 }
 
-.card-description {
-  font-size: 28px;
-  margin-top: 100px;
+.ticket-description h2 {
+  margin-bottom: 16px;
 }
 
 .home-description {
   font-size: 15px;
+}
+
+.card-text {
+  margin: 32px 0;
 }
 
 .buttons-home {
