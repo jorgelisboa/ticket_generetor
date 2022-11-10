@@ -136,9 +136,44 @@ main {
   font-size: 15px;
 }
 
+.recharge-title {
+  margin: 32px 0;
+  font-size: 32px;
+
+  
+}
+
+.recharge-area {
+  padding: 32px;
+  margin: 32px auto;
+}
+
+.recharge-cards-area {
+  justify-content: space-evenly;
+  margin-top: 32px;
+  display: flex;
+}
+
+.recharge-card {
+  padding: 16px;
+  text-align: center;
+  border: 1px solid var(--cor-dark);
+  max-width: 200px;
+}
+
+.recharge-card h1 {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.recharge-card p {
+  font-size: 15px;
+}
+
 .card-text {
   margin: 32px 0;
 }
+
 .buttons-home {
   display: flex;
   flex-direction: column;
