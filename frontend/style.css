@@ -128,6 +128,24 @@ main {
   margin-bottom: 32px;
 }
 
+.recharged-title {
+  margin-bottom: 32px;
+}
+
+.recharged-success {
+  padding: 32px 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  
+}
+
+.verifyed-icon {
+  max-width: 200px;
+  width: 100%;
+}
+
 .ticket-description h2 {
   margin-bottom: 16px;
 }
@@ -172,6 +190,11 @@ main {
 
 .card-text {
   margin: 32px 0;
+}
+
+.recharged-text {
+  margin: 32px;
+  margin-top: 75px;
 }
 
 .buttons-home {
