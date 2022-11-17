@@ -22,9 +22,9 @@ const confirmarRecarga = () => {
     axios.post(`${baseUrl}/recarga`, {codigo_bilhete, tipo})
 	.then(response => {
 		if (response.data.status == 200)	
+        //Ir pra página do cartão gerado (levar valores do cartão)
             window.open("http://localhost:5500/frontend/pages/recharged.html");
 
-        //Ir pra página do cartão gerado (levar valores do cartão)
     })
 	.catch(error  =>  {
         console.log(error)	
