@@ -42,14 +42,15 @@ const recarregarBilhete = async (req) => {
     connectString: process.env.DB_CONNECTIONSTRING || "CEATUDB02:1521/xe", 
   });
  try {
+
   const bilhete = await connection.execute(`SELECT id FROM bilhetes WHERE numero = :bilhete`, [req.codigo_bilhete]);
 
-  //const recarga = await connection.execute(`INSERT INTO  FROM bilhetes WHERE numero = :bilhete`, [bilhete.rows[0].id]);
+  const recarga = await connection.execute(`INSERT INTO recargas (id_bilhete, id_tipo) VALUES (:id, :tipo)`, [bilhete.rows[0].ID, req.tipo]);
 
-  return bilhete.rows[0].id;
+  return 1;
 
   } catch (err) {
-    console.log(err);
+    return 0;
   } finally {
    if (connection) {
      try {

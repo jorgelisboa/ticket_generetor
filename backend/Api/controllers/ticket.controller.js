@@ -5,7 +5,9 @@ const recuperarBilhetes = async (req, res) => {
 };
 
 const recarregarBilhete = async (req, res) => {
-  return res.status(200).json(await ticketController.recarregarBilhete(req.body));
+  const recarga = await ticketController.recarregarBilhete(req.body)
+  if (recarga == 1) return res.status(200).json({msg: "Bilhete recarregado com sucesso.", status: 200})
+  else res.status(400).json({msg: "Erro ao recarregar bilhete.", status: 400})
 }
 
 module.exports = {
