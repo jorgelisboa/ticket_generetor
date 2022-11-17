@@ -1,8 +1,10 @@
 function changeUrl() {
-    setTimeout(console.log("Olá mundo"), 5000)
-    window.open(
-        "http://localhost:5500/frontend/index.html", "_self"
-    );
+    setTimeout(() => {
+        window.open(
+            "http://localhost:5500/frontend/index.html", "_self"
+        );
+        
+    }, 5000);
 }
 
 changeUrl();

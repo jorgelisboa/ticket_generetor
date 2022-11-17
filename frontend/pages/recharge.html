@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recarga de Ticket</title>
   <link rel="stylesheet" href="../style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
         maximus lacus non metus sollicitudin, eu vestibulum mi 
         eleifend. 
       </p>
-      <button class="generation-button" type="confirmar" onclick="confirmar()">CONFIRMAR</button>
+      <button class="generation-button" type="confirmar" onclick="abrirModal(1)">CONFIRMAR</button>
     </div>
     <div class="recharge-card">
       <h1>Recarga dupla</h1>
@@ -47,7 +48,7 @@
         maximus lacus non metus sollicitudin, eu vestibulum mi 
         eleifend. 
       </p>
-      <button class="generation-button" type="confirmar" onclick="confirmar()">CONFIRMAR</button>
+      <button class="generation-button" type="confirmar" onclick="abrirModal(2)">CONFIRMAR</button>
     </div>
     <div class="recharge-card">
       <h1>Recarga 7 dias</h1>
@@ -58,7 +59,7 @@
         maximus lacus non metus sollicitudin, eu vestibulum mi 
         eleifend. 
       </p>
-      <button class="generation-button" type="confirmar" onclick="confirmar()">CONFIRMAR</button>
+      <button class="generation-button" type="confirmar" onclick="abrirModal(3)">CONFIRMAR</button>
     </div>
     <div class="recharge-card">
       <h1>Recarga 30 dias</h1>
@@ -69,10 +70,22 @@
         maximus lacus non metus sollicitudin, eu vestibulum mi 
         eleifend. 
       </p>
-      <button class="generation-button" type="confirmar" onclick="confirmar()">CONFIRMAR</button>
+      <button class="generation-button" type="confirmar" onclick="abrirModal(4)">CONFIRMAR</button>
     </div>
   </div>
 </section>
+
+<div class="modal" id="modal-one">
+  <div class="modal-bg modal-exit"></div>
+  <div class="modal-container">
+    <h1>Digite o número do seu cartão:</h1>
+    <div class="input-group">
+      <input type="text" id="codigo_bilhete" class="input-field" placeholder="Ex: 00000000000">
+      <button onclick="confirmarRecarga()" id="recharge_btn" class="generation-button">RECARREGAR</button>
+    </div>
+    <button class="modal-close modal-exit">X</button>
+  </div>
+</div>
 
   <footer>
     <p>Ticket Generator - PUC Campinas - Projeto Integrador II</p>

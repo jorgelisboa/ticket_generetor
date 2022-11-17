@@ -15,14 +15,14 @@ const recuperarBilhetes = async () => {
   let randomCode = new Date().getTime();
 
    try {
-    await connection.execute(`INSERT INTO bilhetes (codigo, numero) VALUES (seq_codigo_bilhetes.nextval, :bilhete)`, [randomCode]);
+    await connection.execute(`INSERT INTO bilhetes (id, numero) VALUES (seq_codigo_bilhetes.nextval, :bilhete)`, [randomCode]);
 
     const bilhete = await connection.execute(`SELECT numero, data_geracao FROM bilhetes WHERE numero = :bilhete`, [randomCode]);
 
     return bilhete.rows[0];
 
    } catch (err) {
-     console.log(err);
+     return 0;
    } finally {
     if (connection) {
       try {
