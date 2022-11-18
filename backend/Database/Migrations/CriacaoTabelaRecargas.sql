@@ -17,9 +17,9 @@ CREATE TABLE recargas(
     CONSTRAINT fk_recarga_tipo FOREIGN KEY (id_tipo) REFERENCES tipos_recargas(id)
 );
 
-INSERT INTO tipos_recargas (id, descricao) VALUES (1, 'Bilhete único (40min)');    
-INSERT INTO tipos_recargas (id, descricao) VALUES (2, 'Bilhete duplo (2 x 40min)');
-INSERT INTO tipos_recargas (id, descricao) VALUES (3, 'Bilhete de 7 dias');
-INSERT INTO tipos_recargas (id, descricao) VALUES (4, 'Bilhete de 30 dias');
+INSERT INTO tipos_recargas (id, descricao, valor) VALUES (1, 'Bilhete único (40min)', 5);    
+INSERT INTO tipos_recargas (id, descricao, valor) VALUES (2, 'Bilhete duplo (2 x 40min)', 10);
+INSERT INTO tipos_recargas (id, descricao, valor) VALUES (3, 'Bilhete de 7 dias', 45);
+INSERT INTO tipos_recargas (id, descricao, valor) VALUES (4, 'Bilhete de 30 dias', 105);
 
 COMMIT;

@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilhete criado</title>
-    <link rel="stylesheet" href="../style.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilhete criado</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
-    <nav>
-      <div class="container">
-        <a href="/" title="Logo Ticket Generator">
-          <picture class="flex-center">
-            <img src="../images/logo-bus-puc.png" alt="logo empresa" class="logo">
-          </picture>
-        </a>
+  <nav>
+    <div class="container">
+      <a href="/" title="Logo Ticket Generator">
+        <picture class="flex-center">
+          <img src="../images/logo-bus-puc.png" alt="logo empresa" class="logo">
+        </picture>
+      </a>
+    </div>
+  </nav>
+
+
+
+
+  <main>
+    <div class="created">
+      <div class="card-text">
+        <h1 class="card-title">
+          Bilhete gerado com sucesso!
+        </h1>
+        <div class="ticket-description">
+          <h2>
+            Confira abaixo as informações:
+          </h2>
+          <h3 id="ticketCodigo"></h3>
+          <h3 id="ticketDate"></h3>
+        </div>
       </div>
-    </nav>
 
+      <picture>
+        <img src="../images/ticket.png" alt="urban card" class="card" align="right">
+      </picture>
+    </div>
+  </main>
 
-
-
-    <main>
-        <div class="created">
-            <div class="card-text">
-                <h1 class="card-title">
-                    Bilhete gerado com sucesso!
-                </h1>
-                <div class="ticket-description">
-                    <h2>
-                        Confira abaixo as informações:
-                    </h2>
-                    <h3 id="ticketCodigo"></h3>
-                    <h3 id="ticketDate"></h3>
-                </div>
-            </div>
-
-            <picture>
-                <img src="../images/ticket.png" alt="urban card" class="card" align="right">
-            </picture>
-        </div>       
-    </main>
-
-    <footer>
+  <footer>
     <p>Ticket Generator - PUC Campinas - Projeto Integrador II</p>
-    </footer>
-    <script src="../generatedTicket.js"></script>
+  </footer>
+  <script src="../generatedTicket.js"></script>
 </body>
-</html>  
+
+</html>
 
 
 <!-- <body>

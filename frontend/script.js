@@ -1,52 +1,59 @@
-const baseUrl = "http://localhost:5000/api"
+const baseUrl = "http://localhost:5000/api";
 
 const abrirModal = (tipo) => {
-    const modal = document.getElementById('modal-one');
-    modal.classList.add('open');
-    const exits = modal.querySelectorAll('.modal-exit');
-    exits.forEach(function (exit) {
-      exit.addEventListener('click', function (event) {
-        event.preventDefault();
-        modal.classList.remove('open');
-      });
+  const modal = document.getElementById("modal-one");
+  modal.classList.add("open");
+  const exits = modal.querySelectorAll(".modal-exit");
+  exits.forEach(function (exit) {
+    exit.addEventListener("click", function (event) {
+      event.preventDefault();
+      modal.classList.remove("open");
     });
+  });
 
-    document.getElementById('recharge_btn').setAttribute('data', tipo)
-}
+  document.getElementById("recharge_btn").setAttribute("data", tipo);
+};
 
-    
 const confirmarRecarga = () => {
-    const tipo = parseInt(document.getElementById('recharge_btn').getAttribute('data'))
-    const codigo_bilhete = document.getElementById('codigo_bilhete').value
+  const tipo = parseInt(
+    document.getElementById("recharge_btn").getAttribute("data")
+  );
+  const codigo_bilhete = document.getElementById("codigo_bilhete").value;
 
-    axios.post(`${baseUrl}/recarga`, {codigo_bilhete, tipo})
-	.then(response => {
-		if (response.data.status == 200)	
+  axios
+    .post(`${baseUrl}/recarga`, { codigo_bilhete, tipo })
+    .then((response) => {
+      if (response.data.status == 200)
         //Ir pra página do cartão gerado (levar valores do cartão)
-            window.open("http://localhost:5500/frontend/pages/recharged.html");
-
+        window.open("http://localhost:5501/frontend/pages/recharged.html");
     })
-	.catch(error  =>  {
-        console.log(error)	
-	})
-}
+    .catch((error) => {
+      console.log(error);
+    });
+};
 
 getBilhete = async () => {
-    axios.get(`${baseUrl}/bilhetes`)
-	.then(response => {
-		console.log(response)		
-        const date = new Date(`${response.data.DATA_GERACAO}`).toLocaleString()
-        const bilhete = response.data.NUMERO
+  axios
+    .get(`${baseUrl}/bilhetes`)
+    .then((response) => {
+      console.log(response);
+      const date = new Date(`${response.data.DATA_GERACAO}`).toLocaleString();
+      const bilhete = response.data.NUMERO;
 
-        //Ir pra página do cartão gerado (levar valores do cartão)
-        window.open("http://localhost:5500/frontend/pages/created.html?cod="+bilhete+"&date="+date, "_self");
+      //Ir pra página do cartão gerado (levar valores do cartão)
+      window.open(
+        "http://localhost:5501/frontend/pages/created.html?cod=" +
+          bilhete +
+          "&date=" +
+          date,
+        "_self"
+      );
     })
-	.catch(error  =>  {
-        console.log(error)	
-	})
-
-}
+    .catch((error) => {
+      console.log(error);
+    });
+};
 const gerarBilhete = () => {
-    //Criar cartão na API
-    getBilhete();
-}
+  //Criar cartão na API
+  getBilhete();
+};
