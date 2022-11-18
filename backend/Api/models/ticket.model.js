@@ -51,13 +51,21 @@ const recarregarBilhete = async (req) => {
       [req.codigo_bilhete]
     );
 
+    const recarga = await connection.execute(
+      `SELECT descricao FROM tipos_recargas WHERE id = :id`,
+      [req.tipo]
+    );
+
     await connection.execute(
       `INSERT INTO recargas (id_bilhete, id_tipo) VALUES (:id, :tipo)`,
       [bilhete.rows[0].ID, req.tipo]
     );
 
-    return 1;
+    console.log(recarga.rows[0]);
+
+    return recarga.rows[0];
   } catch (err) {
+    console.log(err);
     return 0;
   } finally {
     if (connection) {

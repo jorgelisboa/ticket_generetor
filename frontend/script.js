@@ -1,7 +1,7 @@
 const baseUrl = "http://localhost:5000/api";
 
 const abrirModal = (tipo) => {
-  const modal = document.getElementById("modal-one");
+  const modal = document.getElementById("modal");
   modal.classList.add("open");
   const exits = modal.querySelectorAll(".modal-exit");
   exits.forEach(function (exit) {
@@ -21,7 +21,7 @@ const confirmarRecarga = () => {
   const codigo_bilhete = document.getElementById("codigo_bilhete").value;
 
   axios
-    .post(`${baseUrl}/recarga`, { codigo_bilhete, tipo })
+    .post(`${baseUrl}/recargas`, { codigo_bilhete, tipo })
     .then((response) => {
       if (response.data.status == 200)
         //Ir pra página do cartão gerado (levar valores do cartão)

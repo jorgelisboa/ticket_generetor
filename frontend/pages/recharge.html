@@ -22,62 +22,62 @@
   </nav>
 
   <!-- Card do ticket -->
-<section class="recharge-area">
-  <h1 class="recharge-title">
+  <section class="recharge-area">
+    <h1 class="recharge-title">
       Escolha o tipo da sua recarga abaixo:
-  </h1>
+    </h1>
 
-  <div class="recharge-cards-area">
-    <div class="recharge-card">
-      <h1>Recarga unica</h1>
-      <p>
-        Bilhete único, que dará direito ao usuário utilizar o bilhete apenas uma vez. Deverá aparecer
-        mensagem ao usuário explicando o modo de utilização, o valor a ser pago e a confirmação
-        para o aceite da compra.
-      </p>
-      <button class="generation-button" type="confirmar" onclick="abrirModal(1)">CONFIRMAR</button>
+    <div class="recharge-cards-area">
+      <div class="recharge-card">
+        <h1>Recarga unica</h1>
+        <p>
+          Bilhete único, que dará direito ao usuário utilizar o bilhete apenas uma vez. Deverá aparecer
+          mensagem ao usuário explicando o modo de utilização, o valor a ser pago e a confirmação
+          para o aceite da compra.
+        </p>
+        <button class="generation-button" type="confirmar" onclick="abrirModal(1)">CONFIRMAR</button>
+      </div>
+      <div class="recharge-card">
+        <h1>Recarga dupla</h1>
+        <p>
+          Bilhete duplo, que dará direito ao usuário utilizar o bilhete duas vezes. Deverá aparecer
+          mensagem ao usuário explicando o modo de utilização, o valor a ser pago e a confirmação
+          para o aceite da compra.
+        </p>
+        <button class="generation-button" type="confirmar" onclick="abrirModal(2)">CONFIRMAR</button>
+      </div>
+      <div class="recharge-card">
+        <h1>Recarga 7 dias</h1>
+        <p>
+          Bilhete de 7 dias, que dará ao usuário utilizar o transporte por um período de 7 dias. Deverá
+          aparecer mensagem ao usuário explicando o modo de utilização, o valor a ser pago e a
+          confirmação para o aceite da compra.
+        </p>
+        <button class="generation-button" type="confirmar" onclick="abrirModal(3)">CONFIRMAR</button>
+      </div>
+      <div class="recharge-card">
+        <h1>Recarga 30 dias</h1>
+        <p>
+          Bilhete de 30 dias, que dará ao usuário utilizar o transporte por um período de dias. Deverá
+          aparecer mensagem ao usuário explicando o modo de utilização, o valor a ser pago e a
+          confirmação para o aceite da compra.
+        </p>
+        <button class="generation-button" type="confirmar" onclick="abrirModal(4)">CONFIRMAR</button>
+      </div>
     </div>
-    <div class="recharge-card">
-      <h1>Recarga dupla</h1>
-      <p>
-        Bilhete duplo, que dará direito ao usuário utilizar o bilhete duas vezes. Deverá aparecer
-        mensagem ao usuário explicando o modo de utilização, o valor a ser pago e a confirmação
-        para o aceite da compra. 
-      </p>
-      <button class="generation-button" type="confirmar" onclick="abrirModal(2)">CONFIRMAR</button>
-    </div>
-    <div class="recharge-card">
-      <h1>Recarga 7 dias</h1>
-      <p>
-        Bilhete de 7 dias, que dará ao usuário utilizar o transporte por um período de 7 dias. Deverá
-        aparecer mensagem ao usuário explicando o modo de utilização, o valor a ser pago e a
-        confirmação para o aceite da compra.
-      </p>
-      <button class="generation-button" type="confirmar" onclick="abrirModal(3)">CONFIRMAR</button>
-    </div>
-    <div class="recharge-card">
-      <h1>Recarga 30 dias</h1>
-      <p>
-        Bilhete de 30 dias, que dará ao usuário utilizar o transporte por um período de dias. Deverá
-        aparecer mensagem ao usuário explicando o modo de utilização, o valor a ser pago e a
-        confirmação para o aceite da compra.
-      </p>
-      <button class="generation-button" type="confirmar" onclick="abrirModal(4)">CONFIRMAR</button>
+  </section>
+
+  <div class="modal" id="modal">
+    <div class="modal-bg modal-exit"></div>
+    <div class="modal-container">
+      <h1>Digite o número do seu cartão:</h1>
+      <div class="input-group">
+        <input type="text" id="codigo_bilhete" class="input-field" placeholder="Ex: 00000000000">
+        <button onclick="confirmarRecarga()" id="recharge_btn" class="generation-button">RECARREGAR</button>
+      </div>
+      <button class="modal-close modal-exit">X</button>
     </div>
   </div>
-</section>
-
-<div class="modal" id="modal-one">
-  <div class="modal-bg modal-exit"></div>
-  <div class="modal-container">
-    <h1>Digite o número do seu cartão:</h1>
-    <div class="input-group">
-      <input type="text" id="codigo_bilhete" class="input-field" placeholder="Ex: 00000000000">
-      <button onclick="confirmarRecarga()" id="recharge_btn" class="generation-button">RECARREGAR</button>
-    </div>
-    <button class="modal-close modal-exit">X</button>
-  </div>
-</div>
 
   <footer>
     <p>Ticket Generator - PUC Campinas - Projeto Integrador II</p>

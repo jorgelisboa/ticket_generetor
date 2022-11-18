@@ -180,14 +180,17 @@ main {
 .recharge-cards-area {
   justify-content: space-evenly;
   margin-top: 32px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
 }
 
 .recharge-card {
   padding: 16px;
   text-align: center;
   border: 1px solid var(--cor-dark);
-  max-width: 200px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .recharge-card h1 {
