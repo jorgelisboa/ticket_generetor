@@ -10,7 +10,7 @@ router.use(cors());
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
-router.get("/api/bilhetes", ticketController.recuperarBilhetes);
+router.get("/api/bilhetes", ticketController.gerarBilhete);
 router.post("/api/recargas", ticketController.recarregarBilhete);
 
 module.exports = router;

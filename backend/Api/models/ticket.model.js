@@ -6,10 +6,10 @@ oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
 oracledb.autoCommit = true;
 
 oracledb.initOracleClient({
-  libDir: "C:\\Program Files\\oracledb\\instantclient_21_7",
+  libDir: "C:\\instantclient_21_7",
 });
 
-const recuperarBilhetes = async () => {
+const gerarBilhete = async () => {
   let connection;
   connection = await oracledb.getConnection(dbConfig);
 
@@ -28,8 +28,8 @@ const recuperarBilhetes = async () => {
 
     return bilhete.rows[0];
   } catch (err) {
+    console.log(err)
     return 0;
-    console.log(err);
   } finally {
     if (connection) {
       try {
@@ -61,8 +61,6 @@ const recarregarBilhete = async (req) => {
       [bilhete.rows[0].ID, req.tipo]
     );
 
-    console.log(recarga.rows[0]);
-
     return recarga.rows[0];
   } catch (err) {
     console.log(err);
@@ -79,6 +77,6 @@ const recarregarBilhete = async (req) => {
 };
 
 module.exports = {
-  recuperarBilhetes,
-  recarregarBilhete,
+  gerarBilhete,
+  recarregarBilhete
 };

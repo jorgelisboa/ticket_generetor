@@ -1,7 +1,7 @@
 const ticketController = require("../models/ticket.model");
 
-const recuperarBilhetes = async (req, res) => {
-  const bilhete = await ticketController.recuperarBilhetes();
+const gerarBilhete = async (req, res) => {
+  const bilhete = await ticketController.gerarBilhete();
   if (bilhete == 0)
     res.status(400).json({ msg: "Erro ao gerar bilhete.", status: 400 });
   else return res.status(200).json(bilhete);
@@ -19,6 +19,6 @@ const recarregarBilhete = async (req, res) => {
 };
 
 module.exports = {
-  recuperarBilhetes,
+  gerarBilhete,
   recarregarBilhete,
 };
