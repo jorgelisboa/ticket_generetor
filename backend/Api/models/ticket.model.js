@@ -5,13 +5,17 @@ oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
 
 oracledb.autoCommit = true;
 
-oracledb.initOracleClient({
-  libDir: "C:\\instantclient_21_7",
-});
+// oracledb.initOracleClient({
+//   libDir: "C:\\instantclient_21_7",
+// });
 
 const gerarBilhete = async () => {
   let connection;
-  connection = await oracledb.getConnection(dbConfig);
+  connection = await oracledb.getConnection({
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    connectString: process.env.DB_CONNECTIONSTRING || "CEATUDB02:1521/xe",
+  });
 
   let randomCode = new Date().getTime();
 
@@ -43,7 +47,12 @@ const gerarBilhete = async () => {
 
 const recarregarBilhete = async (req) => {
   let connection;
-  connection = await oracledb.getConnection(dbConfig);
+  // connection = await oracledb.getConnection(dbConfig);
+  connection = await oracledb.getConnection({
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    connectString: process.env.DB_CONNECTIONSTRING || "CEATUDB02:1521/xe",
+  });
 
   try {
     const bilhete = await connection.execute(
