@@ -240,6 +240,47 @@ main {
   color: inherit;
 }
 
+.terminal-background {
+  background-color: var(--cor-light);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.terminal-form {
+  max-width: 600px;
+  padding: 32px;
+  align-items: center;
+}
+
+.terminal-input {
+  border: none;
+  width: 100%;
+  margin: 0; /*vertical e horizontal */
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+ 
+.terminal-button {
+  border: 1px solid var(--cor-dark);
+  width: 100%;
+  margin-top: 8px; /*vertical e horizontal */
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--cor-light);
+}
+
+.terminal-button:hover,
+.terminal-button:visited:hover {
+  color: var(--cor-light);
+  background-color: var(--cor-secundaria);
+}
+
 nav {
   background-color: var(--cor-secundaria);
   height: 95px;
