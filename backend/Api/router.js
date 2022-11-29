@@ -1,5 +1,6 @@
 const express = require("express");
 const ticketController = require("./controllers/ticket.controller");
+const terminalController = require("./controllers/terminal.controller");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
@@ -12,5 +13,7 @@ router.use(bodyParser.json());
 
 router.get("/api/bilhetes", ticketController.gerarBilhete);
 router.post("/api/recargas", ticketController.recarregarBilhete);
+router.get("/api/recargas/:codigo_bilhete", ticketController.historicoBilhete);
+router.post("/api/terminal", terminalController.utilizacaoBilhete);
 
 module.exports = router;
