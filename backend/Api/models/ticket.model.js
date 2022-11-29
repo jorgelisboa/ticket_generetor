@@ -1,5 +1,5 @@
 const oracledb = require("oracledb");
-const dbConfig = require("./connection.js");
+const dbConfig = require("../services/connection.js");
 
 oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
 
