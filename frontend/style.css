@@ -256,6 +256,7 @@ main {
 
 .terminal-input {
   border: none;
+  text-align: center;
   width: 100%;
   margin: 0; /*vertical e horizontal */
   font-size: 16px;
