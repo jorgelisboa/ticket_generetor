@@ -177,6 +177,11 @@ main {
   margin: 32px auto;
 }
 
+.search-area {
+  width: 60%;
+  margin: 1%;
+}
+
 .recharge-cards-area {
   justify-content: space-evenly;
   margin-top: 32px;
@@ -217,6 +222,17 @@ main {
   flex-direction: column;
 }
 
+.input-history {
+  width: 50%;
+  padding: 14px 0;
+  font-size: 18px;
+}
+
+table {
+  margin-top: 2%;
+  width: 100%;
+}
+
 .generation-button {
   background-color: #e1e1e1;
   color: var(--cor-dark);
@@ -228,6 +244,29 @@ main {
   cursor: pointer;
   text-align: center;
   transition: background-color 0.3s ease-in-out;
+}
+
+.button-history {
+  background-color: #e1e1e1;
+  color: var(--cor-dark);
+  text-decoration: none;
+  padding: 18px;
+  width: 30%;
+  margin: 8px auto;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-history:hover,
+.button-history:visited:hover {
+  color: var(--cor-light);
+  background-color: var(--cor-secundaria);
+}
+
+.button-history:visited {
+  color: inherit;
 }
 
 .generation-button:hover,
