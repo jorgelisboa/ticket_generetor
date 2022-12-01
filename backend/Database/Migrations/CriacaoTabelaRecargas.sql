@@ -11,6 +11,8 @@ CREATE TABLE recargas(
     data_recarga DATE DEFAULT SYSDATE,
     data_expiracao DATE,
     data_primeiro_uso DATE,
+    data_ultimo_uso DATE,
+    bilhete_status CHAR[1] DEFAULT 'N',
     id_bilhete INTEGER NOT NULL,
     id_tipo INTEGER NOT NULL,
     CONSTRAINT fk_recarga_bilhete FOREIGN KEY (id_bilhete) REFERENCES bilhetes(id),

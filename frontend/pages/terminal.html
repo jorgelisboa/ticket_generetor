@@ -6,15 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Terminal</title>
 </head>
 
 <body>
     <section class="terminal-background">
-        <form class="terminal-form" onsubmit="passarCartao()">
+        <form class="terminal-form" onsubmit="event.preventDefault(); passarCartao()">
             <input class="terminal-input" id="card_field" type="text" placeholder="xxxxxxxxxxx" required maxlength="12"
                 minlength="12">
-            <button class="terminal-button">CONFIRMAR</button>
+            <button type="submit" class="terminal-button">CONFIRMAR</button>
         </form>
     </section>
 </body>
