@@ -4,7 +4,7 @@ DROP TABLE tipos_recargas;
 CREATE TABLE tipos_recargas(
     id INTEGER NOT NULL PRIMARY KEY,
     descricao VARCHAR2(200),
-    valor INTEGER NOT NULL,
+    valor INTEGER NOT NULL
 );
 
 CREATE TABLE recargas(
@@ -12,7 +12,7 @@ CREATE TABLE recargas(
     data_expiracao DATE,
     data_primeiro_uso DATE,
     data_ultimo_uso DATE,
-    bilhete_status CHAR[1] DEFAULT 'N',
+    bilhete_status CHAR DEFAULT 'N',
     id_bilhete INTEGER NOT NULL,
     id_tipo INTEGER NOT NULL,
     CONSTRAINT fk_recarga_bilhete FOREIGN KEY (id_bilhete) REFERENCES bilhetes(id),

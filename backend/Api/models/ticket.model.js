@@ -5,19 +5,19 @@ oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
 
 oracledb.autoCommit = true;
 
-// oracledb.initOracleClient({
-//   libDir: "C:\\Program Files\\oracledb\\instantclient_21_7",
-// });
+oracledb.initOracleClient({
+  libDir: "C:\\Program Files\\oracledb\\instantclient_21_7",
+});
 
 // Geração de bilhete único.
 const gerarBilhete = async () => {
   let connection;
-  // connection = await oracledb.getConnection(dbConfig);
-  connection = await oracledb.getConnection({
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    connectString: process.env.DB_CONNECTIONSTRING || "CEATUDB02:1521/xe",
-  });
+  connection = await oracledb.getConnection(dbConfig);
+  // connection = await oracledb.getConnection({
+  //   user: process.env.DB_USER,
+  //   password: process.env.DB_PASSWORD,
+  //   connectString: process.env.DB_CONNECTIONSTRING || "CEATUDB02:1521/xe",
+  // });
 
   let randomCode = new Date().getTime();
 
@@ -50,12 +50,12 @@ const gerarBilhete = async () => {
 // Recarga de bilhete pelo número.
 const recarregarBilhete = async (req) => {
   let connection;
-  // connection = await oracledb.getConnection(dbConfig);
-  connection = await oracledb.getConnection({
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    connectString: process.env.DB_CONNECTIONSTRING || "CEATUDB02:1521/xe",
-  });
+  connection = await oracledb.getConnection(dbConfig);
+  // connection = await oracledb.getConnection({
+  //   user: process.env.DB_USER,
+  //   password: process.env.DB_PASSWORD,
+  //   connectString: process.env.DB_CONNECTIONSTRING || "CEATUDB02:1521/xe",
+  // });
 
   try {
     const bilhete = await connection.execute(
@@ -89,12 +89,12 @@ const recarregarBilhete = async (req) => {
 
 const historicoBilhete = async (bilhete) => {
   let connection;
-  // connection = await oracledb.getConnection(dbConfig);
-  connection = await oracledb.getConnection({
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    connectString: process.env.DB_CONNECTIONSTRING || "CEATUDB02:1521/xe",
-  });
+  connection = await oracledb.getConnection(dbConfig);
+  // connection = await oracledb.getConnection({
+  //   user: process.env.DB_USER,
+  //   password: process.env.DB_PASSWORD,
+  //   connectString: process.env.DB_CONNECTIONSTRING || "CEATUDB02:1521/xe",
+  // });
 
   try {
     const idBilhete = await connection.execute(
