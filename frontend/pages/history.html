@@ -28,8 +28,11 @@
             <h3>
                 Insira o ID do seu bilhete:
             </h3>
-            <input type="text" class="input-history"id="historic_input"> 
-            <button class="button-history" type="confirmar" onclick="">BUSCAR</button>
+            <form onsubmit="event.preventDefault(); getHistoric(getNumeroBilhete())">
+                <input type="text" class="input-history"id="historic_input" maxlength="13" minlength="13"> 
+                <button class="button-history" type="confirmar" >BUSCAR </button>
+             </form>
+            
         </div>
         <div>
             <table>
@@ -51,8 +54,8 @@
         </div>
     </div>
 
-
-
+    <!-- incluindo o arquivo js -->
+    <script src="../javascript/historic.js"></script>
 
 
 </body>

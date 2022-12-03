@@ -6,7 +6,7 @@ oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
 oracledb.autoCommit = true;
 
 oracledb.initOracleClient({
-  libDir: "C:\\Program Files\\oracledb\\instantclient_21_7",
+  libDir: "C:\\instantclient_21_7",
 });
 
 // Geração de bilhete único.
